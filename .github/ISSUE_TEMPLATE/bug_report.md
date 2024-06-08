@@ -39,6 +39,9 @@ export default tseslint.config({
     extends: [
         ...config
     ],
+    ignores: [
+        "eslint.config.js"
+    ],
     rules: {
         "no-control-regex": "off"
     }
