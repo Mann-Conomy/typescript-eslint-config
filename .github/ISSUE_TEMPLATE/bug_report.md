@@ -25,22 +25,24 @@ A clear and concise description of what you expected to happen.
 
 A clear and concise description of what happens.
 
-## ESLint configuration
+## TypeScript ESLint configuration
 
-- **ESLint version:** [e.g. 9.4.0]
-- **Node version:** [e.g. 20.12.2]
+- **TypeScript ESLint version:** [e.g. 7.12.0]
+- **TypeScript version:** [e.g. 5.4.5]
+- **Node.js version:** [e.g. 20.12.2]
 - **Rules:**
 ```js
+import tseslint from "typescript-eslint";
 import config from "@mann-conomy/typescript-eslint-config";
 
-export default [
-    ...config,
-    {
-        rules: {
-            "no-control-regex": "off"
-        }
+export default tseslint.config({
+    extends: [
+        ...config
+    ],
+    rules: {
+        "no-control-regex": "off"
     }
-];
+});
 ```
 
 ## Environment

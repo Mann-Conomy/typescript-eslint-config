@@ -25,16 +25,17 @@ $ yarn add --dev @mann-conomy/typescript-eslint-config
 ## Usage
 
 ```js
+import tseslint from "typescript-eslint";
 import config from "@mann-conomy/typescript-eslint-config";
 
-export default [
-    ...config,
-    {
-        rules: {
-            "no-control-regex": "off"
-        }
+export default tseslint.config({
+    extends: [
+        ...config
+    ],
+    rules: {
+        "no-control-regex": "off"
     }
-];
+});
 ```
 
 For reference, you can find the complete [TypeScript ESLint config here](https://github.com/Mann-Conomy/typescript-eslint-config/blob/main/eslint.config.js).

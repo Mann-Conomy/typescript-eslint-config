@@ -78,9 +78,9 @@ function createFunctionWithExplicitAny() {
 }
 
 function createCodeWithInconsistentImports() {
-    return "import { Foo } from './foo';\nconst bar: Foo = {};";
+    return "import { Linter } from \"eslint\";\nconst rules: Readonly<Linter.RulesRecord> = {};";
 }
 
 function createFunctionWithoutErrors() {
-    return "export function add(a: number, b: number) { \nreturn a + b;\n}";
+    return "export function add(a: number, b: number) { \n\treturn a + b;\n}";
 }

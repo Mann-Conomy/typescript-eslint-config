@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "A sharable TypeScript ESLint config for the Mann-Conomy Project.",
   "main": "eslint.config.js",
-
+  "types": "eslint.config.d.ts",
   "files": [
-    "eslint.config.js"
+    "eslint.config.js",
+    "eslint.config.d.ts"
   ],
   "scripts": {
     "test": "node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js"

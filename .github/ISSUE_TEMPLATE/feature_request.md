@@ -19,19 +19,20 @@ Provide a detailed description of the proposed feature or improvement. If applic
 
 ## Example Usage
 
-If applicable, provide an example of how the new feature or improvement would be configured in a `eslint-config.js`.
+If applicable, provide an example of how the new feature or improvement would be configured in a `eslint.config.js`.
 
 ```js
+import tseslint from "typescript-eslint";
 import config from "@mann-conomy/typescript-eslint-config";
 
-export default [
-    ...config,
-    {
-        rules: {
-            "new-rule": "error"
-        }
+export default tseslint.config({
+    extends: [
+        ...config
+    ],
+    rules: {
+        "new-rule": "error"
     }
-];
+});
 ```
 
 ## Expected behaviour
